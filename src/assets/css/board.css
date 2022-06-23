@@ -1,0 +1,38 @@
+.Board {
+    height: 225px;
+    width: 225px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    overflow: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.Board div {
+    text-align: center;
+    height: 70px;
+    width: 70px;
+    background-color: aliceblue;
+    border: 2px solid;
+}
+
+.Choice {
+    text-align: center;
+    margin-top: 50px;
+    width: 150px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: black;
+}
+
+.Choice div{
+    margin: auto;
+    border: 2px solid;
+    height: 70px;
+    width: 70px;
+    background-color: burlywood;
+}
