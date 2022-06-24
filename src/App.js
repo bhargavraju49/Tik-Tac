@@ -7,19 +7,39 @@ function App() {
   const [value, setValue] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9]);
   const [choice, setChoice] = useState(["", true]);
   const [cpu,setCpu] = useState(false)
+  const [start,setStart] = useState(false)
+  const [win,setWin] = useState(false)
+
+  function checkWin(x){
+    let y = x
+    console.log(y)
+    let k = [[0,1,2],[0,3,6],[0,4,8],[3,4,5],[6,7,8],[1,4,7],[2,5,8],[2,4,6]]
+    let win = false
+    for (let i=0; i<k.length; i++){
+        console.log(y[k[i][0]],y[k[i][1]],y[k[i][2]])
+        if (y[k[i][0]]==y[k[i][1]] && y[k[i][1]]==y[k[i][2]]){
+            win = true
+            console.log(y[k[i][0]],y[k[i][1]],y[k[i][2]],'wiiiiin')
+            break
+        }
+      }
+    return win
+  }
 
   function handleChoice(x) {
     console.log(x);
     setChoice(x);
+    setStart(true)
   }
   function handleplayerip(x) {
     if (choice[0] != "") {
-      console.log(x);
-      console.log(x);
+      // console.log(x);
+      // console.log(x);
       setValue([...x]);
+        if(checkWin([...x])){setWin(true)}
+        else{setCpu(!cpu)}
       let y = choice[0] == "X" ? "O" : "X";
       setChoice([y, false]);
-      setCpu(!cpu)
       }
     }
 
@@ -33,10 +53,13 @@ function App() {
         }
       }
       let index = z[Math.floor(Math.random()*z.length)];
-      x1[index] = choice[0]
-      setValue([...x1]);
+      x1[index] = (choice[0]!='')?choice[0]:x1[index]
+      setValue(x1);
       let z1 = choice[0] == "X" ? "O" : "X";
-      setChoice([z1, false]);
+      if (start){
+        setChoice([z1, false]);
+        if(checkWin(x1)){setWin(true)}
+      }
     },2000)
   },[cpu])
 
@@ -51,6 +74,7 @@ function App() {
       {choice[1] && <div>please choose X|O </div>}
       {choice[1] && <Choice click={handleChoice}></Choice>}
       <br></br>
+      {(win==true)&&<div>{(choice[0]=='X')?'O':'X'} won</div>}
       {/* {!choice[1] && <div>your choice: {choice} start the game</div>} */}
     </div>
   );
