@@ -6,6 +6,7 @@ function Board(props) {
     if (props.board[x.index]=='X' || props.board[x.index]=='O'){
       return
     }
+    if (props.cpu){return}
     if (props.won){
       return
     }

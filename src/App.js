@@ -9,6 +9,7 @@ function App() {
   const [cpu,setCpu] = useState(false)
   const [start,setStart] = useState(false)
   const [win,setWin] = useState(false)
+  const [cputurn,setCputurn] = useState(false)
 
   function checkWin(x){
     let y = x
@@ -40,6 +41,7 @@ function App() {
         else{setCpu(!cpu)}
       let y = choice[0] == "X" ? "O" : "X";
       setChoice([y, false]);
+      setCputurn(true)
       }
     }
 
@@ -60,6 +62,7 @@ function App() {
         setChoice([z1, false]);
         if(checkWin(x1)){setWin(true)}
       }
+      setCputurn(false)
     },2000)
   },[cpu])
 
@@ -70,6 +73,7 @@ function App() {
         playerip={handleplayerip}
         choiceplayer={choice[0]}
         won = {win}
+        cpu = {cputurn}
       ></Board>
       <br></br>
       {choice[1] && <div>please choose X|O </div>}
