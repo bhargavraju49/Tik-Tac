@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Tik-Tac/static/css/main.1950c4a5.css",
+    "main.js": "/Tik-Tac/static/js/main.f92df0e4.js",
+    "index.html": "/Tik-Tac/index.html",
+    "main.1950c4a5.css.map": "/Tik-Tac/static/css/main.1950c4a5.css.map",
+    "main.f92df0e4.js.map": "/Tik-Tac/static/js/main.f92df0e4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1950c4a5.css",
+    "static/js/main.f92df0e4.js"
+  ]
+}

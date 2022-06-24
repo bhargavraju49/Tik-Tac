@@ -1,0 +1,2 @@
+.Board{background-color:#000;display:flex;flex-direction:row;flex-wrap:wrap;height:225px;justify-content:baseline;justify-content:space-between;overflow:auto;width:225px}.Board div{background-color:#f0f8ff;border:2px solid;height:70px;text-align:center;width:70px}.Choice{background-color:#000;display:flex;flex-direction:row;height:80px;justify-content:space-around;margin-top:50px;text-align:center;width:150px}.Choice div{background-color:#deb887;border:2px solid;height:70px;margin:auto;width:70px}
+/*# sourceMappingURL=main.1950c4a5.css.map*/
