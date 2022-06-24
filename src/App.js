@@ -69,6 +69,7 @@ function App() {
         board={value}
         playerip={handleplayerip}
         choiceplayer={choice[0]}
+        won = {win}
       ></Board>
       <br></br>
       {choice[1] && <div>please choose X|O </div>}

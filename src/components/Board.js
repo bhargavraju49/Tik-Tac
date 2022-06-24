@@ -6,6 +6,9 @@ function Board(props) {
     if (props.board[x.index]=='X' || props.board[x.index]=='O'){
       return
     }
+    if (props.won){
+      return
+    }
     if (props.choiceplayer != ''){
       const y = props.board
       console.log(y)
