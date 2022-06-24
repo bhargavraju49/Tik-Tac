@@ -63,7 +63,7 @@ function App() {
         if(checkWin(x1)){setWin(true)}
       }
       setCputurn(false)
-    },2000)
+    },500)
   },[cpu])
 
   return (
